@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+<h2>Nueva Categoria</h2>
+@using (Html.BeginForm("Nuevo", "Categoria", FormMethod.Post))
+{
+    <p>
+        @Html.Label("ID")<br />
+        @Html.TextBox("idCategoria")
+    </p>
+    <p>
+        @Html.Label("Nombre")<br />
+        @Html.TextBox("NombreCategoria")
+    </p>
+    <p>
+        @Html.Label("Descripcion")<br />
+        @Html.TextBox("Descripcion")
+    </p>
+    <p>
+        <input  type="submit" value="Guardar"/>
+    </p>
+    <p style="color:darkblue">
+        <strong>@ViewBag.mensaje</strong>
+
+    </p>
+}
+
